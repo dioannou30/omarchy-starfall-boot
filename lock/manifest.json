@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "starfall.lock",
+  "name": "Starfall Lock Screen",
+  "version": "1.0.0",
+  "author": "dioannou30",
+  "description": "Starfall night-sky lock screen: twinkling stars, shooting star, and the omarchy wordmark.",
+  "omarchy": {
+    "capabilities": [
+      "authentication"
+    ],
+    "clonedFrom": "omarchy.lock"
+  },
+  "kinds": [
+    "service"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "service": "Service.qml"
+  }
+}
