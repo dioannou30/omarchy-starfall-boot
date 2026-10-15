@@ -1,6 +1,7 @@
 # Starfall — Omarchy boot screen
 
-A custom [Plymouth](https://www.freedesktop.org/wiki/Software/Plymouth/) boot and disk-unlock screen for [Omarchy](https://omarchy.org/). A deep-navy night sky with twinkling stars, an occasional shooting star, and a speed-streaked `omarchy` wordmark above the password field.
+A custom [Plymouth](https://www.freedesktop.org/wiki/Software/Plymouth/) boot screen for [Omarchy](https://omarchy.org/). 
+A deep-navy night sky with twinkling stars, an occasional shooting star, and a speed-streaked `omarchy` wordmark above the password field.
 
 ![Starfall boot screen preview](preview.png)
 
@@ -66,12 +67,6 @@ omarchy plymouth reset
 sudo rm -rf /usr/share/plymouth/themes/starfall
 ```
 
-## Notes
-
-- Running any `omarchy plymouth set ...` or `omarchy plymouth reset` command switches back to the stock Omarchy theme. To return to Starfall, repeat steps 3 and 4.
-- Testing with `plymouthd` from inside Hyprland shows nothing, because the compositor owns the display. The quickest check is to reboot or log out: the shutdown screen reads the theme straight from disk, so it shows changes even before the boot image is rebuilt.
-- If you break the script while customizing, the screen may come up blank or plain. You can still type your disk password and press Enter. Run `omarchy plymouth reset` to get back to a working screen.
-
 ## Customizing
 
 | File | What it is |
@@ -86,7 +81,3 @@ sudo rm -rf /usr/share/plymouth/themes/starfall
 | `starfall.script` | Layout, colors, and animation |
 
 Background color is set by `Window.SetBackgroundTopColor` / `SetBackgroundBottomColor` at the top of `starfall.script`. Star count, twinkle speed, and shooting-star timing live in the `star.*` and `streak.*` variables right below it. After any change, copy the folder again and rebuild the boot image.
-
-## Credits
-
-Based on the stock Omarchy Plymouth theme script.
